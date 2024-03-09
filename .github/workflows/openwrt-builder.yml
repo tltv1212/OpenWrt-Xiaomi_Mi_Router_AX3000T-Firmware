@@ -28,6 +28,7 @@ env:
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   UPLOAD_COWTRANSFER: true
+  UPLOAD_WERANSFER: true
   TZ: Asia/Shanghai
 
 jobs:
