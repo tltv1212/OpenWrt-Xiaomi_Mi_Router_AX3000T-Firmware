@@ -1,5 +1,4 @@
 #
-# Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
 # https://github.com/P3TERX/Actions-OpenWrt
 #
 # File: .github/workflows/openwrt-bulder.yml
@@ -10,16 +9,13 @@
 # This is free software, licensed under the MIT License.
 # See /LICENSE for more information.
 #
-# https://github.com/P3TERX/Actions-OpenWrt
-# Description: Build OpenWrt using GitHub Actions
-#
 
 name: OpenWrt Builder
 
 on:
   repository_dispatch:
   workflow_dispatch:
-    inputs:
+  inputs:
       ssh:
         description: 'SSH connection to Actions'
         required: false
@@ -41,11 +37,12 @@ env:
 
 jobs:
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-22.04
+
     steps:
     - name: Checkout
       uses: actions/checkout@main
+
     - name: Initialization environment
       env:
         DEBIAN_FRONTEND: noninteractive
@@ -199,4 +196,3 @@ with:
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
