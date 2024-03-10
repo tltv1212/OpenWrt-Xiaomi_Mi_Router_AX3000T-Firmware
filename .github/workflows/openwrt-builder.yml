@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: blank
+name: openwrt-builder
 
 on:
   repository_dispatch:
